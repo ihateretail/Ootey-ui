@@ -1,5 +1,7 @@
 'use strict';
-
+/*
+* Ootey main configuration.
+*/
 angular.module('ooteyApp', [
   'ngAnimate',
   'ngCookies',

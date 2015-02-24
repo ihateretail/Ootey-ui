@@ -6,10 +6,7 @@ angular.module('ooteyApp')
 	$scope.menu = [{
       'title': 'Home',
       'link': '/'
-    },{
-	  'title':'Home2',
-	  'link':'/home2'
-	}];
+    }];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
