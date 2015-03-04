@@ -23,10 +23,17 @@
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right navbar-user">
+        <li class="dropdown messages-dropdown">
+          <a ng-show="isLoggedIn()" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">2</span> <b class="caret"></b> </a>
+          <ul class="dropdown-menu">
+            <li class="divider"/>
+            <li class="dropdown" ng-show="isLoggedIn()" ng-class="{active: isActive('/inbox')}"><a href="" ng-click="inbox()">Go to Inbox</a></li>
+          </ul>
+        </li>
         <li class="dropdown user-dropdown">
           <a ng-show="isLoggedIn()" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{ getCurrentUser().name }}<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li ng-show="isLoggedIn()" ng-class="{active: isActive('/dashboard')}"><a href="/dashboard">Dashboard</a></li>
+            <li ng-show="isLoggedIn()" ng-class="{active: isActive('/dashboard')}"><a href="/dashboard"><i class="fa fa-bullseye"></i> Dashboard</a></li>
             <li ng-show="isLoggedIn()"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
             <li class="dropdown" ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><i class="fa fa-gear"></i> Settings</a></li>
             <li class="divider"></li>

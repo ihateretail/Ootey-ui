@@ -28,5 +28,7 @@ server.listen(config.port, config.ip, function () {
   console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
 });
 
+//static host media files
+app.use('/media',express.static(__dirname +'/media/'));
 // Expose app
 exports = module.exports = app;

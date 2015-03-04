@@ -8,6 +8,129 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 
+//products seed
+var Product = require('../api/product/product.model');
+
+Product.find({}).remove(function(){
+   Product.create({
+     sku: "SK10048",
+     qty: "21",
+     name: "ScottKay Diamond Ring",
+     price: "299.00",
+     vendor: "Gulianis Fine Jewelery",
+     vendorId : "GFJ94555",
+     description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+     brandName: "Scott Kay",
+     category:{},
+     url:"",
+     //originFullUrl: "/GFJ/{id}/rings",
+     images: [
+       {
+         "sizeName": "Small",
+         "url": "media/product/thumbnail/sk10048.jpg"
+       },
+       {
+         "sizeName": "Large",
+         "url": "media/product/thumbnail/sk10048.jpg"
+       }
+     ],
+     imagesAlt: [
+       {
+         "url": "media/product/thumbnail/sk10048_alt.jpg"
+       }
+     ]
+
+   },
+     {
+       sku: "SK10049",
+       qty: "21",
+       name: "ScottKay Diamond Ring",
+       price: "299.00",
+       vendor: "Gulianis Fine Jewelery",
+       vendorId : "GFJ94555",
+       description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+       brandName: "Scott Kay",
+       category:{},
+       url:"",
+       //originFullUrl: "/GFJ/{id}/rings",
+       images: [
+         {
+           "sizeName": "Small",
+           "url": "media/product/thumbnail/sk10049.jpg"
+         },
+         {
+           "sizeName": "Large",
+           "url": "media/product/thumbnail/sk10049.jpg"
+         }
+       ],
+       imagesAlt: [
+         {
+           "url": "media/product/thumbnail/sk10049_alt.jpg"
+         }
+       ]
+
+     },
+     {
+       sku: "SK10050",
+       qty: "21",
+       name: "ScottKay Diamond Ring",
+       price: "299.00",
+       vendor: "Gulianis Fine Jewelery",
+       vendorId : "GFJ94555",
+       description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+       brandName: "Scott Kay",
+       category:{},
+       url:"",
+       //originFullUrl: "/GFJ/{id}/rings",
+       images: [
+         {
+           "sizeName": "Small",
+           "url": "media/product/thumbnail/sk10050.jpg"
+         },
+         {
+           "sizeName": "Large",
+           "url": "media/product/thumbnail/sk10050.jpg"
+         }
+       ],
+       imagesAlt: [
+         {
+           "url": "media/product/thumbnail/sk10050_alt.jpg"
+         }
+       ]
+
+     },
+     {
+       sku: "SK10051",
+       qty: "21",
+       name: "ScottKay Diamond Ring",
+       price: "299.00",
+       vendor: "Gulianis Fine Jewelery",
+       vendorId : "GFJ94555",
+       description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+       brandName: "Scott Kay",
+       category:{},
+       url:"",
+       //originFullUrl: "/GFJ/{id}/rings",
+       images: [
+         {
+           "sizeName": "Small",
+           "url": "media/product/thumbnail/sk10051.jpg"
+         },
+         {
+           "sizeName": "Large",
+           "url": "media/product/thumbnail/sk10051.jpg"
+         }
+       ],
+       imagesAlt: [
+         {
+           "url": "media/product/thumbnail/sk10051_alt.jpg"
+         }
+       ]
+
+     }
+   );
+});
+
 Thing.find({}).remove(function() {
   Thing.create({
     name : 'Development Tools',
@@ -35,7 +158,8 @@ User.find({}).remove(function() {
     provider: 'local',
     name: 'Test User',
     email: 'test@test.com',
-    password: 'test'
+    password: 'test',
+      role:'vendor'
   }, {
     provider: 'local',
     role: 'admin',

@@ -12,6 +12,7 @@
 var _ = require('lodash');
 var Product = require('./product.model');
 
+
 // Get list of products
 exports.index = function(req, res) {
   Product.find(function (err, products) {
